@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 
-class AuthenticationBody extends StatefulWidget {
+import 'authentication_bloc_listener.dart';
+import 'name_authentication_field.dart';
+import 'orange_container_authentication.dart';
+
+class AuthenticationBody extends StatelessWidget {
   const AuthenticationBody({super.key});
 
   @override
-  State<AuthenticationBody> createState() => _AuthenticationBodyState();
-}
-
-class _AuthenticationBodyState extends State<AuthenticationBody> {
-  @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text("Authentication Screen"),
+    return const SafeArea(
+        child: Column(
+          children: [
+            OrangeContainerAuthentication(),
+            NameAuthenticationField(),
+            AuthenticationBlocListener()
+          ],
+        )
     );
   }
 }
