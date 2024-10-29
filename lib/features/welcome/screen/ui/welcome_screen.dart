@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/welcome_body.dart';
+
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
 
@@ -7,7 +9,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("Welcome Screen"),
+        child: WelcomeBody(),
       ),
     );
   }

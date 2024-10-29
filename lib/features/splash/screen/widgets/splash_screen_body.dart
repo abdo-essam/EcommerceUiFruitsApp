@@ -14,7 +14,7 @@ class SplashScreenBody extends StatefulWidget {
 class _SplashScreenBodyState extends State<SplashScreenBody> {
   _startDelay() {
     Timer(
-        const Duration(seconds: 5),
+        const Duration(seconds: 2),
         _goNext
     );
   }
