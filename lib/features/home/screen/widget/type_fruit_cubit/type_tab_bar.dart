@@ -13,15 +13,13 @@ class TypeTabBar extends StatefulWidget {
 }
 
 class _TypeTabBarState extends State<TypeTabBar> {
-  var cubit;
 
   final List titles = ['Hottest', 'Popular', 'New Combo', 'Top'];
   int selectedIndex = 0;
 
   @override
   void initState() {
-    cubit = HomeTypeFruitCubit.get(context)
-        .getFruitDataUingType(titles[selectedIndex]);
+    HomeTypeFruitCubit.get(context).getFruitDataUsingType(titles[selectedIndex]);
     super.initState();
   }
 
@@ -34,8 +32,9 @@ class _TypeTabBarState extends State<TypeTabBar> {
           onTap: (index) {
             setState(() {
               selectedIndex = index;
-              cubit.getFruitDataUingType(titles[index]);
+              HomeTypeFruitCubit.get(context).getFruitDataUsingType(titles[index]);
             });
+
           },
           isScrollable: true,
           labelStyle: AppTextStyles.font24NavyBlueMedium,

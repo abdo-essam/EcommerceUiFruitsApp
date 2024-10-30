@@ -9,7 +9,7 @@ class HomeTypeFruitCubit extends Cubit<HomeTypeFruitState> {
   static HomeTypeFruitCubit get(context) => BlocProvider.of(context);
   EcommerceDatabase ecommerceDatabase = EcommerceDatabase.instance;
 
-  Future<void> getFruitDataUingType(String type) async {
+  Future<void> getFruitDataUsingType(String type) async {
     emit(HomeTypeFruitLoading());
     try {
       List<FruitComboModel> fruits =

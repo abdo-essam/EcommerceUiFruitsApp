@@ -29,7 +29,7 @@ class _FruitsComboItemsState extends State<FruitsComboItems> {
       child: Container(
         width: 152.w,
         height: 183.h,
-        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        padding: EdgeInsets.symmetric(horizontal: 14.w),
         decoration: BoxDecoration(
             color: widget.fruitComboModel.color,
             borderRadius: BorderRadius.circular(20)),
