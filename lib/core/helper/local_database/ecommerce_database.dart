@@ -112,4 +112,14 @@ class EcommerceDatabase {
     final db = await database;
     db.close();
   }
+
+  Future<FruitComboModel> getFruitItemById(int id) async {
+    final db = await database;
+    List<Map<String, dynamic>> fruitsData =
+    await db.query('Fruits', where: 'id = ?', whereArgs: [id]);
+    List<FruitComboModel> fruits =
+    fruitsData.map((fruit) => FruitComboModel.fromJson(fruit)).toList();
+    return fruits.first;
+  }
+
 }
