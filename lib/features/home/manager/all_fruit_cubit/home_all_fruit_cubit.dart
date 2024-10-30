@@ -10,6 +10,8 @@ class HomeAllFruitCubit extends Cubit<HomeAllFruitState> {
   EcommerceDatabase ecommerceDatabase = EcommerceDatabase.instance;
   TextEditingController textSearchFruitController = TextEditingController();
 
+  static HomeAllFruitCubit get(context) => BlocProvider.of(context);
+
   Future<void> insertFruitsData() async {
     try {
       List<FruitComboModel> data = await ecommerceDatabase.getFruitsData();

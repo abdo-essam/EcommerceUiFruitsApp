@@ -82,5 +82,12 @@ class AppTextStyles{
     color: ColorManager.mainOrange ,
     fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
+
+  static  TextStyle font14RomanSilverRegular =  TextStyle(
+    fontSize: 14.sp ,
+    fontWeight: FontWeightHelper.regular ,
+    color: ColorManager.romanSilver ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
 }
 

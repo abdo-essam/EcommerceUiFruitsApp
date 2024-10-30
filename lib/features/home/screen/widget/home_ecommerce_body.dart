@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theme/app_text_styles.dart';
+import 'home_search.dart';
 import 'home_tob_bar.dart';
 import 'rebuild_widgets/recommended_fruits_combo_list_bloc_builder.dart';
 import 'rebuild_widgets/recommended_fruits_combo_list_bloc_builder.dart';
@@ -36,7 +37,7 @@ class _HomeEcommerceBodyState extends State<HomeEcommerceBody> {
             SizedBox(height: 24.h),
             const UserNameBlocBuilder(),
             SizedBox(height: 24.h),
-            //HomeSearch(),
+            const HomeSearch(),
             SizedBox(height: 24.h),
             Text(
               'Recommended Combo',
