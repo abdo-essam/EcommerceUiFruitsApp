@@ -54,5 +54,33 @@ class AppTextStyles{
     color: ColorManager.mainOrange ,
     fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
+
+  static  TextStyle font24NavyBlueMedium =  TextStyle(
+    fontSize: 24.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: ColorManager.navyBlue ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
+  static  TextStyle font10NavyBlueRegular =  TextStyle(
+    fontSize: 10.sp ,
+    fontWeight: FontWeightHelper.regular ,
+    color: ColorManager.navyBlue ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
+  static  TextStyle font16NavyBlueMedium =  TextStyle(
+    fontSize: 16.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: ColorManager.navyBlue ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
+  static  TextStyle font14OrangeRegular =  TextStyle(
+    fontSize: 14.sp ,
+    fontWeight: FontWeightHelper.regular,
+    color: ColorManager.mainOrange ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
 }
 

@@ -23,4 +23,7 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
       emit(AuthenticationFailure(errorMessage: "Failed to insert name : $e"));
     }
   }
+
+
+
 }

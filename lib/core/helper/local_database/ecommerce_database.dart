@@ -1,5 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 
+import '../../models/fruits_combo_model/fruit_combo_model.dart';
+
 class EcommerceDatabase {
   static Database? _database;
 
@@ -9,7 +11,7 @@ class EcommerceDatabase {
 
   Future<Database> get database async {
     _database ??= await openDatabase('ecommerce.db',
-          version: 1, onCreate: _onCreate, onUpgrade: _onUpgrade);
+        version: 1, onCreate: _onCreate, onUpgrade: _onUpgrade);
     return _database!;
   }
 
@@ -22,6 +24,18 @@ class EcommerceDatabase {
       )
     """,
     );
+
+    await db.execute("""
+      CREATE TABLE IF NOT EXISTS Fruits (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        description TEXT NOT NULL,
+        imagePath TEXT NOT NULL,
+        type TEXT NOT NULL,
+        price INTEGER NOT NULL,
+        color INTEGER NOT NULL
+        )
+    """);
   }
 
   Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
@@ -39,7 +53,6 @@ class EcommerceDatabase {
     );
   }
 
-
   Future<String> getLastAuthenticationName() async {
     final db = await database;
     List<Map<String, dynamic>> result = await db.query(
@@ -49,5 +62,44 @@ class EcommerceDatabase {
       limit: 1,
     );
     return result.first['name'] as String;
+  }
+
+  // insert into table fruits
+  Future<void> insertInFruitsTable(FruitComboModel fruitModelCompo) async {
+    final db = await database; // Ensure database is initialized
+    await db.insert(
+      'Fruits',
+      fruitModelCompo.toJson(), // Handles duplicates
+    );
+  }
+
+  // get from table fruits
+  Future<List<FruitComboModel>> getFruitsData() async {
+    final db = await database;
+    List<Map<String, dynamic>> fruitsData = await db.query('Fruits');
+    List<FruitComboModel> fruits =
+        fruitsData.map((fruit) => FruitComboModel.fromJson(fruit)).toList();
+    return fruits;
+  }
+
+  // search fruits using name
+  Future<List<FruitComboModel>> getSearchFruits(String name) async {
+    final db = await database;
+    List<Map<String, dynamic>> fruitsData = await db.query('Fruits',
+        where: 'LOWER(name) LIKE LOWER(?)', whereArgs: ['%$name%']);
+    List<FruitComboModel> fruits =
+        fruitsData.map((fruit) => FruitComboModel.fromJson(fruit)).toList();
+    return fruits;
+  }
+
+
+  Future<void> deleteAllData() async {
+    final db = await database; // Ensure database is initialized
+    await db.delete('Fruits');
+  }
+
+  Future<void> close() async {
+    final db = await database;
+    db.close();
   }
 }
