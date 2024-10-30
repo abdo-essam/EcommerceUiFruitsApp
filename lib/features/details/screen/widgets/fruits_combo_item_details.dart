@@ -100,6 +100,12 @@ class FruitsComboItemDetails extends StatelessWidget {
   }
 
   void addToBasket(BuildContext context) {
-
+    var cubit = context.read<DetailsCubit>();
+    cubit.insertNewOrder(
+      name: fruitComboModel.fruitName,
+      imagePath: fruitComboModel.imagePath,
+      numOfOrder: numOfOrder,
+      totalPrice: numOfOrder * fruitComboModel.price,
+    );
   }
 }

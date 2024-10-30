@@ -42,7 +42,6 @@ class _FruitsComboItemsState extends State<FruitsComboItems> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: CustomCircleButton(
-                    backgroundColor: Colors.white,
                       icon:
                           isFav ? Icons.favorite : Icons.favorite_border_outlined,
                       onPressed: () {

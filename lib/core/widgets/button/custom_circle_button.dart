@@ -6,7 +6,7 @@ class CustomCircleButton extends StatelessWidget {
   const CustomCircleButton(
       {super.key,
       required this.onPressed,
-      this.backgroundColor = ColorManager.oldLace,
+      this.backgroundColor,
       this.icon = Icons.add,
       this.iconColor = ColorManager.mainOrange,
       required this.buttonSize,

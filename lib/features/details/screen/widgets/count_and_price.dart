@@ -48,6 +48,7 @@ class CountAndPrice extends StatelessWidget {
               width: 24.w,
             ),
             CustomCircleButton(
+              backgroundColor: ColorManager.oldLace,
               onPressed: () {
                 cubitCount.incrementCount();
               },

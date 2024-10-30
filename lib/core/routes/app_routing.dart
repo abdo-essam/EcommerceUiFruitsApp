@@ -10,6 +10,7 @@ import '../../features/details/screen/ui/details_screen.dart';
 import '../../features/home/manager/all_fruit_cubit/home_all_fruit_cubit.dart';
 import '../../features/home/manager/name_authentication_cubit/home_name_authentication_cubit.dart';
 import '../../features/home/manager/type_fruit_cubit/home_type_fruit_cubit.dart';
+import '../../features/my_basket/screen/ui/my_basket_screen.dart';
 import '../../features/splash/screen/ui/splash_screen.dart';
 import '../../features/welcome/screen/ui/welcome_screen.dart';
 
@@ -52,6 +53,10 @@ class AppRouting {
             child: const DetailsScreen(),
           ),
           settings: RouteSettings(arguments: arguments),
+        );
+      case Routes.myBasketScreen:
+        return MaterialPageRoute(
+          builder: (_) => const MyBasketScreen(),
         );
     }
   }
