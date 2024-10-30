@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../features/authentication/manager/authentication_cubit.dart';
 import '../../features/authentication/screen/ui/authentication_screen.dart';
+import '../../features/details/manager/details_cubit.dart';
 import '../../features/details/screen/ui/details_screen.dart';
 import '../../features/home/manager/all_fruit_cubit/home_all_fruit_cubit.dart';
 import '../../features/home/manager/name_authentication_cubit/home_name_authentication_cubit.dart';
@@ -14,6 +15,8 @@ import '../../features/welcome/screen/ui/welcome_screen.dart';
 
 class AppRouting {
   Route? generateRoutes(RouteSettings routeSettings) {
+    final arguments = routeSettings.arguments;
+
     switch (routeSettings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
@@ -44,7 +47,11 @@ class AppRouting {
         );
       case Routes.detailsScreen:
         return MaterialPageRoute(
-          builder: (_) => const DetailsScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => DetailsCubit(),
+            child: const DetailsScreen(),
+          ),
+          settings: RouteSettings(arguments: arguments),
         );
     }
   }

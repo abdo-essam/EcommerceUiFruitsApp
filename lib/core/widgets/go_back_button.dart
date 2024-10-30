@@ -17,8 +17,9 @@ class GoBackButton extends StatelessWidget {
             Navigator.of(context).pop();
           },
       child: Container(
-        width: 100.w,
-        padding:  EdgeInsets.symmetric(horizontal: 8.w, vertical: 5.h),
+        width: 80.w,
+        height: 32.h,
+
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(100.r),
@@ -26,8 +27,8 @@ class GoBackButton extends StatelessWidget {
         child: Row(
           children: [
             Icon(
-              Icons.arrow_back_ios,
-              color: ColorManager.navyBlue,
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
               size: 20.sp,
             ),
             Text(

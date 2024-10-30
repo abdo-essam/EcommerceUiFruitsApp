@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../../core/routes/routes.dart';
+import '../../../../../core/widgets/button/custom_circle_button.dart';
 
 class FruitsComboItems extends StatefulWidget {
   const FruitsComboItems({super.key, required this.fruitComboModel});
@@ -38,18 +39,19 @@ class _FruitsComboItemsState extends State<FruitsComboItems> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isFav = !isFav;
-                    });
-                  },
-                  icon: Icon(
-                    isFav ? Icons.favorite : Icons.favorite_border,
-                    color: ColorManager.mainOrange,
-                    size: 20.sp,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CustomCircleButton(
+                    backgroundColor: Colors.white,
+                      icon:
+                          isFav ? Icons.favorite : Icons.favorite_border_outlined,
+                      onPressed: () {
+                        setState(() {
+                          isFav = !isFav;
+                        });
+                      }, buttonSize: 24.sp,
                   ),
-                )
+                ),
               ],
             ),
             Image.asset(
@@ -85,16 +87,10 @@ class _FruitsComboItemsState extends State<FruitsComboItems> {
                       ),
                     ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24),
-                        color: ColorManager.oldLace),
-                    child: Icon(
-                      Icons.add,
-                      size: 24.sp,
-                      color: ColorManager.mainOrange,
-                    ),
-                  ),
+                  CustomCircleButton(
+                    onPressed: () {},
+                    buttonSize: 24.sp,
+                  )
                 ],
               ),
             )
