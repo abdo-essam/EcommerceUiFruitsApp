@@ -5,8 +5,8 @@ import '../../../../core/theme/app_text_styles.dart';
 import 'home_search.dart';
 import 'home_tob_bar.dart';
 import 'rebuild_widgets/recommended_fruits_combo_list_bloc_builder.dart';
-import 'rebuild_widgets/recommended_fruits_combo_list_bloc_builder.dart';
 import 'rebuild_widgets/user_name_bloc_builder.dart';
+import 'type_fruit_cubit/type_tab_bar.dart';
 
 class HomeEcommerceBody extends StatefulWidget {
   const HomeEcommerceBody({super.key});
@@ -45,8 +45,8 @@ class _HomeEcommerceBodyState extends State<HomeEcommerceBody> {
             ),
             SizedBox(height: 24.h),
             const RecommendedFruitsCombListBlocBuilder(),
-            //SizedBox(height: 42.h),
-            //const TypeTabBar(),
+            SizedBox(height: 42.h),
+            const TypeTabBar(),
             //SizedBox(height: 20.h),
             //const TypeFruitsComboListBlocBuilder()
           ],

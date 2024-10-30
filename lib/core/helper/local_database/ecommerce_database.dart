@@ -92,6 +92,16 @@ class EcommerceDatabase {
     return fruits;
   }
 
+  Future<List<FruitComboModel>> getFruitsByType(String type) async {
+    final db = await database;
+    List<Map<String, dynamic>> fruitsData = await db
+        .query('Fruits', where: 'LOWER(type) = LOWER(?)', whereArgs: [type]);
+    List<FruitComboModel> fruits =
+    fruitsData.map((fruit) => FruitComboModel.fromJson(fruit)).toList();
+    return fruits;
+  }
+
+
 
   Future<void> deleteAllData() async {
     final db = await database; // Ensure database is initialized

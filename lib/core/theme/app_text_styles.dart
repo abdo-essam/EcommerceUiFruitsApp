@@ -76,6 +76,13 @@ class AppTextStyles{
     fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
 
+  static  TextStyle font18NavyBlueMedium =  TextStyle(
+    fontSize: 18.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: ColorManager.navyBlue ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
   static  TextStyle font14OrangeRegular =  TextStyle(
     fontSize: 14.sp ,
     fontWeight: FontWeightHelper.regular,
