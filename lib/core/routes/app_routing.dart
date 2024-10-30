@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../features/authentication/manager/authentication_cubit.dart';
 import '../../features/authentication/screen/ui/authentication_screen.dart';
+import '../../features/details/screen/ui/details_screen.dart';
 import '../../features/home/manager/all_fruit_cubit/home_all_fruit_cubit.dart';
 import '../../features/home/manager/name_authentication_cubit/home_name_authentication_cubit.dart';
 import '../../features/home/manager/type_fruit_cubit/home_type_fruit_cubit.dart';
@@ -29,8 +30,7 @@ class AppRouting {
           builder: (_) => MultiBlocProvider(
             providers: [
               BlocProvider(
-                create: (context) =>
-                HomeNameAuthenticationCubit()..getName(),
+                create: (context) => HomeNameAuthenticationCubit()..getName(),
               ),
               BlocProvider(
                 create: (context) => HomeAllFruitCubit()..insertFruitsData(),
@@ -41,6 +41,10 @@ class AppRouting {
             ],
             child: const HomeEcommerceScreen(),
           ),
+        );
+      case Routes.detailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => const DetailsScreen(),
         );
     }
   }
