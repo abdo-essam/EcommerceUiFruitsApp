@@ -12,7 +12,9 @@ import '../../features/home/manager/name_authentication_cubit/home_name_authenti
 import '../../features/home/manager/type_fruit_cubit/home_type_fruit_cubit.dart';
 import '../../features/my_basket/screen/manager/my_basket_cubit.dart';
 import '../../features/my_basket/screen/ui/my_basket_screen.dart';
+import '../../features/order_complete/screen/ui/order_complete_screen.dart';
 import '../../features/splash/screen/ui/splash_screen.dart';
+import '../../features/track_order/screen/ui/track_order_screen.dart';
 import '../../features/welcome/screen/ui/welcome_screen.dart';
 
 class AppRouting {
@@ -60,6 +62,18 @@ class AppRouting {
           builder: (_) => BlocProvider(
             create: (context) => MyBasketCubit()..getAllBasketOrders(),
             child: const MyBasketScreen(),
+          ),
+        );
+      case Routes.orderCompleteScreen:
+        return MaterialPageRoute(builder: (_) => const OrderCompleteScreen());
+      case Routes.trackOrderScreen:
+        return MaterialPageRoute(builder: (_) => const TrackOrderScreen());
+      default:
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(
+              child: Text('No route defined for ${routeSettings.name}'),
+            ),
           ),
         );
     }

@@ -12,11 +12,11 @@ class FruitsComboItemsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250.h,
+      height: 210.h,
       child: ListView.builder(
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsetsDirectional.only(end: 15.r),
+            padding: const EdgeInsets.all(10),
             child: FruitsComboItems(fruitComboModel: fruitsModel[index]),
           );
         },

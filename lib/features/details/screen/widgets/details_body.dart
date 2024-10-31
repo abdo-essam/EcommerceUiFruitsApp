@@ -9,18 +9,18 @@ class DetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          flex: 1,
-          child: Padding(
-            padding: EdgeInsets.only(top: 20.h, left: 20.r),
-            child: const GoBackButton(),
+        Padding(
+          padding: EdgeInsets.all(18),
+          child: Expanded(
+            flex: 1,
+            child: GoBackButton(),
           ),
         ),
-        const Expanded(flex: 10, child: FruitsComboDetailsBlocBuilder())
+        Expanded(flex: 28, child: FruitsComboDetailsBlocBuilder())
       ],
     ));
   }

@@ -50,10 +50,4 @@ class HomeAllFruitCubit extends Cubit<HomeAllFruitState> {
     }
   }
 
-
-
-
-
-
-
 }

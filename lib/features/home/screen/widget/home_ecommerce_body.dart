@@ -46,7 +46,7 @@ class _HomeEcommerceBodyState extends State<HomeEcommerceBody> {
             ),
             SizedBox(height: 24.h),
             const RecommendedFruitsCombListBlocBuilder(),
-            SizedBox(height: 42.h),
+            SizedBox(height: 36.h),
             const TypeTabBar(),
             SizedBox(height: 20.h),
             const TypeFruitsComboListBlocBuilder()
