@@ -22,6 +22,12 @@ This is a mobile application for a fruit e-commerce store, built using Flutter a
 |---|---|---|
 | <img src="screenshots/Home_screen.png" width="250"> | <img src="screenshots/add_to_basket.png" width="250"> | <img src="screenshots/Order list.png" width="250"> |
 
+| Complete Details | Track Order | Order Complete.png |
+|---|---|---|
+| <img src="screenshots/complete_details.png" width="250"> | <img src="screenshots/Track_order.png" width="250"> | <img src="screenshots/Order_complete.png" width="250"> |
+
+
+
 ## Getting Started
 
 ### Prerequisites
