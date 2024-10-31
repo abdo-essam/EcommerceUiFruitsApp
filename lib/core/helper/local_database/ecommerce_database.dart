@@ -1,5 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 
+import '../../models/basket_order_model/basket_order_model.dart';
 import '../../models/fruits_combo_model/fruit_combo_model.dart';
 
 class EcommerceDatabase {
@@ -130,6 +131,7 @@ class EcommerceDatabase {
     return fruits.first;
   }
 
+
   Future<void> insertInBasketTable({
     required String name,
     required String imagePath,
@@ -147,4 +149,21 @@ class EcommerceDatabase {
       }, // Handles duplicates
     );
   }
+
+
+  Future<List<BasketOrderModel>> getBasketOrders() async {
+    final db = await database;
+    List<Map<String, dynamic>> basketOrder = await db.query('Basket');
+    List<BasketOrderModel> orders =
+    basketOrder.map((order) => BasketOrderModel.fromJson(order)).toList();
+    return orders;
+  }
+
+  Future<void> deleteOrderById(int id) async {
+    final db = await database;
+    await db.delete('Basket', where: 'id = ? ', whereArgs: [id]);
+  }
+
+
+
 }

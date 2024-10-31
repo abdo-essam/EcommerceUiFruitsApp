@@ -13,11 +13,31 @@ class AppTextStyles {
     fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
 
+  static  TextStyle font14BlackRegular =  TextStyle(
+    fontSize: 14.sp ,
+    fontWeight: FontWeightHelper.regular ,
+    color: Colors.black ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+  static  TextStyle font16BlackMedium =  TextStyle(
+    fontSize: 16.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: Colors.black ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
+  static  TextStyle font24WhiteMedium =  TextStyle(
+    fontSize: 24.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: Colors.white ,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
   static TextStyle font14NavyBlueRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorManager.navyBlue,
-    fontFamily: FontFamilyHelper.josefinSansFont,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
 
   static TextStyle font32NavyBlueMedium = TextStyle(
@@ -114,6 +134,13 @@ class AppTextStyles {
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,
     color: ColorManager.romanSilver,
+    fontFamily: FontFamilyHelper.brandonGrotesqueFont,
+  );
+
+  static  TextStyle font16OrangeMedium =  TextStyle(
+    fontSize: 16.sp ,
+    fontWeight: FontWeightHelper.medium ,
+    color: ColorManager.mainOrange ,
     fontFamily: FontFamilyHelper.brandonGrotesqueFont,
   );
 }

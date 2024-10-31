@@ -5,4 +5,6 @@ class Routes {
   static const String homeEcommerceScreen = '/homeEcommerceScreen';
   static const String myBasketScreen = '/myBasketScreen';
   static const String detailsScreen = '/detailsScreen';
+  static const String orderCompleteScreen = '/orderCompleteScreen';
+  static const String trackOrderScreen = '/trackOrderScreen';
 }

@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouting.generateRoutes,
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.myBasketScreen,
       ),
     );
   }
