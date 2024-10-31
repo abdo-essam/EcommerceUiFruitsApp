@@ -18,9 +18,9 @@ This is a mobile application for a fruit e-commerce store, built using Flutter a
 |---|---|---|
 | <img src="screenshots/splash_screen.png" width="250"> | <img src="screenshots/Welcome_screen.png" width="250"> | <img src="screenshots/Authentication.png" width="250"> |
 
-| Splash Screen | Welcome Screen | Authentication Screen |
+| Home Screen | Add To Basket Screen | Order List Screen |
 |---|---|---|
-| <img src="screenshots/splash_screen.png" width="250"> | <img src="screenshots/Welcome_screen.png" width="250"> | <img src="screenshots/Authentication.png" width="250"> |
+| <img src="screenshots/Home_screen.png" width="250"> | <img src="screenshots/add_to_basket.png" width="250"> | <img src="screenshots/Order list.png" width="250"> |
 
 ## Getting Started
 
